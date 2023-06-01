@@ -1,12 +1,14 @@
 # solidity-simple-storage-hardhat
 
-Hardhat project
+### Hardhat project demonstrating compiling and deployment
+
+- Run `npm install` to have setup and packages
 
 - Run `npx hardhat clean` to clean-up the artifacts and cache folder
 
-- Run `npx hardhat compile` to compile solidity contract present in contracts folder
+- After cleanup, run `npx hardhat compile` to compile solidity contract present in contracts folder
 
-- Run `npx hardhat run .\scripts\deploy.js` to deploy the contract into local Hardhat network. You would also see address at which contract is deployed on console screen.
+- After compile process completes, run `npx hardhat run .\scripts\deploy.js` to deploy the contract into local Hardhat network. You would also see address at which contract is deployed on console screen.
 
 - Deployment on testnets such as Sepolia would be different. Run below command and observe the output.
 
@@ -20,7 +22,7 @@ Deployed contract address:  0xE94F3cCE3ABb7ED5f954e6fb87fdFfc304D66c5B
 --- Deployment done ---
 ```
 
-- To verify smart-contract on Etherscan, run below command. You will see a success/confirmation message or if contract has been verified already, a different message will be displayed.
+- Post deployment, to verify smart-contract on Etherscan, run below command. You will see a success/confirmation message or if contract has been verified already, a different message will be displayed.
 
 ```
 npx hardhat verify --network sepolia 0xb1b64Df23d5BD50E3bF2d3b5D83c1b67E6010C6A
