@@ -19,3 +19,14 @@ Output:
 Deployed contract address:  0xE94F3cCE3ABb7ED5f954e6fb87fdFfc304D66c5B
 --- Deployment done ---
 ```
+
+- To verify smart-contract on Etherscan, run below command. You will see a success/confirmation message or if contract has been verified already, a different message will be displayed.
+
+```
+npx hardhat verify --network sepolia 0xb1b64Df23d5BD50E3bF2d3b5D83c1b67E6010C6A
+
+npx hardhat verify --network sepolia <Smart-contract address>
+
+If contract is verifed already, then this will be the message:
+The contract 0xb1b64Df23d5BD50E3bF2d3b5D83c1b67E6010C6A has already been verified
+```
