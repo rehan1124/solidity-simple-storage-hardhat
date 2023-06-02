@@ -2,7 +2,8 @@
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.2",
     "@nomicfoundation/hardhat-verify": "^1.0.0",
-    "hardhat": "^2.14.1"
+    "hardhat": "^2.14.1",
+    "hardhat-gas-reporter": "^1.0.9"
   },
   "dependencies": {
     "dotenv": "^16.1.3"
