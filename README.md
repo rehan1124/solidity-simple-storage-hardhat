@@ -58,3 +58,31 @@ Current block number on Hardhat will be displayed
 >>> npx hardhat block-number --network sepolia
 Current block number on Sepolia Testnet will be displayed
 ```
+
+- Smart-contract tests are added under `test` folder. To run them execute below command and observe the output:
+
+```
+>>> npx hardhat test
+
+ When SimpleStorage contract is deployed
+Deployed contract at address:  0x5FbDB2315678afecb367f032d93F642f64180aa3
+    ✔ Should start with favorite number of 0
+Deployed contract at address:  0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
+Waiting for transaction confirmation with atleast 1 block added...
+    ✔ Should update on calling store() function
+
+  2 passing (2s)
+```
+
+To run tests with a specific keyword:
+
+```
+>>> npx hardhat test --grep store
+
+When SimpleStorage contract is deployed
+Deployed contract at address:  0x5FbDB2315678afecb367f032d93F642f64180aa3
+Waiting for transaction confirmation with atleast 1 block added...
+    ✔ Should update on calling store() function (43ms)
+
+  1 passing (2s)
+```
