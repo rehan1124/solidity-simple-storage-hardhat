@@ -1,18 +1,4 @@
-const { ethers, run, network } = require("hardhat");
-require("@nomicfoundation/hardhat-verify");
-
-async function verify(contractAddress, args) {
-  // --- Works on Etherscan ---
-  console.log("--- Verifying contract ---");
-  try {
-    await run("verify: verify", {
-      address: contractAddress,
-      constructorArgsParams: args,
-    });
-  } catch (error) {
-    console.log(error);
-  }
-}
+const { ethers } = require("hardhat");
 
 async function main() {
   console.log("--- Starting deployment ---");
@@ -24,13 +10,22 @@ async function main() {
 
   console.log("--- Deployment done ---");
 
-  // --- Run verification only if it's not a Hardhat network
-  // if (network.config.chainId != 31337) {
-  //   await simpleStorage.deployTransaction.wait(3);
-  //   verify(simpleStorage.address, []);
-  // } else {
-  //   console.log("Contract has been verified already!!!");
-  // }
+  // --- Let's do some testing ---
+  console.log("--- Basic test ---");
+
+  const currFvNumber = await simpleStorage.retrieve();
+  console.log(`Current favorite number: ${currFvNumber}`);
+
+  // Updated favorite number to 13
+  const updateFvNumberTo = await simpleStorage.store(13);
+  await updateFvNumberTo.wait(1);
+  const updatedFvNumber = await simpleStorage.retrieve();
+  console.log(
+    `Updated favorite number to: ${updatedFvNumber}`,
+    updatedFvNumber == 13
+  );
+
+  console.log("--- Testing completed ---");
 }
 
 main()
