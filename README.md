@@ -86,3 +86,5 @@ Waiting for transaction confirmation with atleast 1 block added...
 
   1 passing (2s)
 ```
+
+- When running tests through hardhat, a gas-report will be generated too. Refer `gas-report.txt`. To turn-off gas reporting, in .env file, set `REPORT_GAS` as `false`.
