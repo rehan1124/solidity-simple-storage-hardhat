@@ -32,3 +32,16 @@ npx hardhat verify --network sepolia <Smart-contract address>
 If contract is verifed already, then this will be the message:
 The contract 0xb1b64Df23d5BD50E3bF2d3b5D83c1b67E6010C6A has already been verified
 ```
+
+- When running deploy.js file on Hardhat or Sepolia network, since we have added a basic test, the output will be as below:
+
+```
+>>> npx hardhat run scripts/deploy.js
+--- Starting deployment ---
+Deployed contract address:  0x5FbDB2315678afecb367f032d93F642f64180aa3
+--- Deployment done ---
+--- Basic test ---
+Current favorite number: 0
+Updated favorite number to: 13 true
+--- Testing completed ---
+```
