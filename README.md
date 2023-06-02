@@ -45,3 +45,16 @@ Current favorite number: 0
 Updated favorite number to: 13 true
 --- Testing completed ---
 ```
+
+- Added custom tasks
+
+```
+>>> npx hardhat accounts
+Lists all the accounts available with Hardhat
+
+>>> npx hardhat block-number
+Current block number on Hardhat will be displayed
+
+>>> npx hardhat block-number --network sepolia
+Current block number on Sepolia Testnet will be displayed
+```

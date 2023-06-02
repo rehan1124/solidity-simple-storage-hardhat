@@ -17,7 +17,11 @@ async function main() {
   console.log(`Current favorite number: ${currFvNumber}`);
 
   // Updated favorite number to 13
+  console.log("Updating favorite number to 13...");
   const updateFvNumberTo = await simpleStorage.store(13);
+  console.log(
+    "Waiting for transaction confirmation with atleast 1 block added..."
+  );
   await updateFvNumberTo.wait(1);
   const updatedFvNumber = await simpleStorage.retrieve();
   console.log(
